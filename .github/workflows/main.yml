@@ -1,0 +1,29 @@
+name: Python Package Build
+
+on:
+  push:
+    branches:
+      - main  # Adjust the branch name as needed
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # You can choose a different runner if needed
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2  # This step fetches your repository's code
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x  # Choose the Python version you need
+
+    - name: Install dependencies
+      run: |
+        
+        # Replace 'path/to/your/requirements.txt' with the actual path to your requirements file
+
+    # Add more steps as needed for your specific build process
+
+    - name: Run tests
+      run: |
